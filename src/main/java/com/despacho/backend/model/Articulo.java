@@ -11,9 +11,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
-import lombok.Data;
 
-@Data
+
+
 @Entity
 @Table(name = "articulos")
 public class Articulo {
@@ -51,4 +51,63 @@ public class Articulo {
     public void prePersist() {
         this.createdAt = LocalDateTime.now();
     }
+    // constructor vacio
+    public Articulo(){}
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public String getResumen() {
+        return resumen;
+    }
+    public void setResumen(String resumen) {
+        this.resumen = resumen;
+    }
+    public String getContenido() {
+        return contenido;
+    }
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+    public String getImagenUrl() {
+        return imagenUrl;
+    }
+    public void setImagenUrl(String imagenUrl) {
+        this.imagenUrl = imagenUrl;
+    }
+    public Usuario getAutor() {
+        return autor;
+    }
+    public void setAutor(Usuario autor) {
+        this.autor = autor;
+    }
+    public Boolean getPublicado() {
+        return publicado;
+    }
+    public void setPublicado(Boolean publicado) {
+        this.publicado = publicado;
+    }
+    public LocalDateTime getFechaPublicacion() {
+        return fechaPublicacion;
+    }
+    public void setFechaPublicacion(LocalDateTime fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
+    }
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    // Getters y Setters
+    
 }
