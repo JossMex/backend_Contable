@@ -74,5 +74,6 @@ public class MensajeContactoController {
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         mensajeService.eliminar(id);
         return ResponseEntity.noContent().build();
+        
     }
 }
